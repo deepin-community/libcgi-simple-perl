@@ -1,5 +1,266 @@
-template-repository (1.0-1) unstable; urgency=medium
+libcgi-simple-perl (1.280-2) unstable; urgency=medium
 
-  * Initial release
+  [ Debian Janitor ]
+  * Apply multi-arch hints. + libcgi-simple-perl: Add Multi-Arch: foreign.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Thu, 13 Oct 2022 22:56:51 +0100
+
+libcgi-simple-perl (1.280-1) unstable; urgency=medium
+
+  [ Salvatore Bonaccorso ]
+  * debian/control: Use HTTPS transport protocol for Vcs-Git URI
+
+  [ gregor herrmann ]
+  * Change bugtracker URL(s) to HTTPS.
+  * debian/copyright: change Copyright-Format 1.0 URL to HTTPS.
+  * debian/upstream/metadata: change GitHub/CPAN URL(s) to HTTPS.
+  * debian/upstream/metadata: use HTTPS for GitHub URLs.
+  * Remove Jose Luis Rivas from Uploaders. Thanks for your work!
+  * Remove Ryan Niebur from Uploaders. Thanks for your work!
+
+  [ Salvatore Bonaccorso ]
+  * Update Vcs-* headers for switch to salsa.debian.org
+
+  [ gregor herrmann ]
+  * debian/watch: use uscan version 4.
+
+  [ Debian Janitor ]
+  * Trim trailing whitespace.
+  * Bump debhelper from old 9 to 12.
+  * Set debhelper-compat version in Build-Depends.
+  * Set upstream metadata fields: Repository, Repository-Browse.
+  * Remove obsolete fields Contact, Name from debian/upstream/metadata
+    (already present in machine-readable debian/copyright).
+
+  [ Jelmer Vernooĳ ]
+  * Fix Repository URL in debian/upstream/metadata.
+
+  [ Debian Janitor ]
+  * Bump debhelper from old 12 to 13.
+
+  [ gregor herrmann ]
+  * Import upstream version 1.280.
+  * Update debian/upstream/metadata.
+  * Update build and test dependencies.
+  * Update years of packaging copyright.
+  * Update Upstream-Contact.
+  * Drop cve-2010-4410.patch, applied upstream.
+  * Refresh remaining patches (offset).
+  * Declare compliance with Debian Policy 4.6.0.
+  * Set Rules-Requires-Root: no.
+  * Annotate test-only build dependencies with <!nocheck>.
+
+ -- gregor herrmann <gregoa@debian.org>  Fri, 14 Jan 2022 18:11:49 +0100
+
+libcgi-simple-perl (1.115-2) unstable; urgency=medium
+
+  * Add build dependency on libio-stringy-perl.
+    Thanks to Chris Lamb for the bug report. (Closes: #796537)
+  * Update years of packaging copyright.
+  * Bump debhelper compatibility level to 9.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 22 Aug 2015 14:43:05 +0200
+
+libcgi-simple-perl (1.115-1) unstable; urgency=low
+
+  [ Salvatore Bonaccorso ]
+  * Change Vcs-Git to canonical URI (git://anonscm.debian.org)
+  * Change search.cpan.org based URIs to metacpan.org based URIs
+
+  [ Axel Beckert ]
+  * debian/copyright: migrate pre-1.0 format to 1.0 using "cme fix dpkg-
+    copyright"
+
+  [ Salvatore Bonaccorso ]
+  * Update Vcs-Browser URL to cgit web frontend
+
+  [ gregor herrmann ]
+  * Add debian/upstream/metadata
+  * Import upstream version 1.115
+  * Update years of packaging copyright and Upstream-Contact.
+  * Refresh patches (offset).
+  * Bump debhelper compatibility level to 8.
+  * Explicitly build-depend on libmodule-build-perl.
+  * Mark package as autopkgtest-able.
+  * Declare compliance with Debian Policy 3.9.6.
+
+ -- gregor herrmann <gregoa@debian.org>  Fri, 24 Oct 2014 22:19:08 +0200
+
+libcgi-simple-perl (1.113-2) unstable; urgency=low
+
+  [ Ansgar Burchardt ]
+  * debian/control: Convert Vcs-* fields to Git.
+
+  [ Salvatore Bonaccorso ]
+  * debian/copyright: Replace DEP5 Format-Specification URL from
+    svn.debian.org to anonscm.debian.org URL.
+
+  [ Dominic Hargreaves ]
+  * Fix lintian warning perl-module-uses-perl4-libs-without-dep by
+    replacing use of shellwords.pl with Text::ParseWords
+  * Update Standards-Version (no changes)
+
+ -- Dominic Hargreaves <dom@earth.li>  Mon, 06 Feb 2012 19:49:43 +0000
+
+libcgi-simple-perl (1.113-1) unstable; urgency=low
+
+  [ Nathan Handler ]
+  * debian/watch: Update to ignore development releases.
+
+  [ Ryan Niebur ]
+  * Email change: Ryan Niebur -> ryan@debian.org
+
+  [ gregor herrmann ]
+  * Improve reference to documentation in long description, thanks to Frank
+    Gevaerts for the bug report (closes: #576530).
+  * Email change: gregor herrmann -> gregoa@debian.org
+  * Email change: Jose Luis Rivas -> ghostbar@debian.org
+  * Minimize debian/rules.
+  * debian/copyright: update formatting.
+  * Set Standards-Version to 3.9.1; remove version from perl build dependency.
+  * Rephrase short description.
+
+  [ Ansgar Burchardt ]
+  * Email change: Ansgar Burchardt -> ansgar@debian.org
+
+  [ Damyan Ivanov ]
+  * New upstream release
+    + Contains fixes to CVE-2010-4410 and CVE-2010-2761
+  * add a patch for CVE-2010-4410
+    + add libtest-exception-perl to dependencies
+  * use "3.0 (quilt)" source format
+
+  [ Niko Tyni ]
+  * [SECURITY] CVE-2010-4411: fix a newline injection issue that resulted
+    from an incomplete fix for CVE-2010-4410.
+
+ -- gregor herrmann <gregoa@debian.org>  Wed, 09 Feb 2011 17:14:01 +0100
+
+libcgi-simple-perl (1.111-2) unstable; urgency=medium
+
+  * [SECURITY] CVE-2010-2761 CVE-2010-4410 CVE-2010-4411:
+    backport fixes for MIME boundary and multiline header vulnerabilities
+    (Closes: #606379)
+  * Add myself to Uploaders.
+
+ -- Niko Tyni <ntyni@debian.org>  Fri, 14 Jan 2011 21:47:20 +0200
+
+libcgi-simple-perl (1.111-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Ryan Niebur <ryanryan52@gmail.com>  Thu, 28 May 2009 18:35:38 -0700
+
+libcgi-simple-perl (1.109-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Ryan Niebur <ryanryan52@gmail.com>  Sat, 18 Apr 2009 10:07:12 -0700
+
+libcgi-simple-perl (1.108-1) unstable; urgency=low
+
+  * New upstream release
+  * add myself to uploaders
+  * policy 3.8.1
+
+ -- Ryan Niebur <ryanryan52@gmail.com>  Fri, 13 Mar 2009 16:53:36 -0700
+
+libcgi-simple-perl (1.107-1) unstable; urgency=low
+
+  [ gregor herrmann ]
+  * debian/control: Changed: Switched Vcs-Browser field to ViewSVN
+    (source stanza).
+
+  [ Ansgar Burchardt ]
+  * New upstream release.
+  * Add myself to Uploaders.
+
+  [ gregor herrmann ]
+  * debian/copyright: update formatting and add information about files under
+    debian/.
+
+ -- Ansgar Burchardt <ansgar@43-1.org>  Sun, 08 Mar 2009 16:43:51 +0100
+
+libcgi-simple-perl (1.106-1) unstable; urgency=low
+
+  * New upstream release.
+  * Set debhelper compatibility level to 7; adapt
+    debian/{control,compat,rules}. Drop cdbs.
+  * debian/control: improve short description.
+  * Set Standards-Version to 3.8.0 (no changes).
+
+ -- gregor herrmann <gregoa@debian.org>  Wed, 01 Oct 2008 23:53:59 +0200
+
+libcgi-simple-perl (1.105-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- gregor herrmann <gregoa@debian.org>  Sat, 17 May 2008 17:09:09 +0200
+
+libcgi-simple-perl (1.104-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/control:
+    - change my email address
+    - add libwww-perl, libtest-pod-perl, libtest-pod-coverage-perl to
+      Build-Depends-Indep in order to enable additional tests
+
+ -- gregor herrmann <gregoa@debian.org>  Fri, 16 May 2008 15:41:24 +0200
+
+libcgi-simple-perl (1.103-2) unstable; urgency=low
+
+  [ Damyan Ivanov ]
+  * debian/control: Added: Vcs-Svn field (source stanza); Vcs-Browser
+    field (source stanza); Homepage field (source stanza).
+
+  [ gregor herrmann ]
+  * debian/rules: delete /usr/lib/perl5 only if it exists.
+  * debian/control: Changed: Maintainer set to Debian Perl Group <pkg-
+    perl-maintainers@lists.alioth.debian.org> (was: Jose Luis Rivas
+    <ghostbar38@gmail.com>); Jose Luis Rivas <ghostbar38@gmail.com>
+    moved to Uploaders.
+  * debian/watch: use dist-based URL.
+  * Set Standards-Version to 3.7.3 (no changes).
+  * Set debhelper compatibility level to 6.
+  * Remove debian/docs and don't install README anymore (doesn't provide any
+    useful information.
+  * debian/copyright: sync with reality and convert to new format.
+  * Remove Homepage from long description.
+  * Add /me to Uploaders.
+
+ -- gregor herrmann <gregor+debian@comodo.priv.at>  Sun, 03 Feb 2008 20:15:20 +0100
+
+libcgi-simple-perl (1.103-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Jose Luis Rivas <ghostbar38@gmail.com>  Fri, 17 Aug 2007 00:50:43 -0400
+
+libcgi-simple-perl (1.0-1) unstable; urgency=low
+
+  * New upstream release
+  * debian/rules:
+   + Updated the cleaning after installing
+  * debian/watch:
+   + Updated being more specific, this avoid false-positives.
+
+ -- Jose Luis Rivas <ghostbar38@gmail.com>  Wed, 30 May 2007 16:05:27 -0400
+
+libcgi-simple-perl (0.080-1) unstable; urgency=low
+
+  * New maintainer (Closes: #416280)
+  * New upstream release
+  * debian/rules: Switch to CDBS
+  * debian/control:
+    + Updated debhelper to (>= 5)
+    + Added cdbs as Build-Depends
+    + Updated Standards-Version to 3.7.2
+
+ -- Jose Luis Rivas <ghostbar38@gmail.com>  Sat, 31 Mar 2007 12:14:16 -0400
+
+libcgi-simple-perl (0.077-1) unstable; urgency=low
+
+  * Initial Release.
+    Closes: #296357
+
+ -- Christopher Sacca <csacca@thecsl.org>  Tue, 22 Feb 2005 13:36:59 -0500

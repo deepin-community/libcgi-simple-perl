@@ -1,15 +1,40 @@
-Source: template-repository
-Section: unknown
+Source: libcgi-simple-perl
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: gregor herrmann <gregoa@debian.org>,
+           Ansgar Burchardt <ansgar@debian.org>,
+           Niko Tyni <ntyni@debian.org>,
+           Dominic Hargreaves <dom@earth.li>
+Section: perl
+Testsuite: autopkgtest-pkg-perl
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Build-Depends: debhelper-compat (= 13)
+Build-Depends-Indep: libtest-exception-perl <!nocheck>,
+                     libtest-nowarnings-perl <!nocheck>,
+                     libtest-simple-perl <!nocheck>,
+                     libwww-perl <!nocheck>,
+                     perl
+Standards-Version: 4.6.0
+Vcs-Browser: https://salsa.debian.org/perl-team/modules/packages/libcgi-simple-perl
+Vcs-Git: https://salsa.debian.org/perl-team/modules/packages/libcgi-simple-perl.git
+Homepage: https://metacpan.org/release/CGI-Simple
+Rules-Requires-Root: no
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: libcgi-simple-perl
+Architecture: all
+Depends: ${misc:Depends},
+         ${perl:Depends}
+Multi-Arch: foreign
+Description: simple CGI.pm compatible OO CGI interface
+ CGI::Simple provides a relatively lightweight drop in replacement for CGI.pm.
+ It shares an identical OO interface to CGI.pm for parameter parsing, file
+ upload, cookie handling and header generation. This module is entirely object
+ oriented, however a complete functional interface is available by using the
+ CGI::Simple::Standard module.
+ .
+ Essentially everything in CGI.pm that relates to the CGI (not HTML) side of
+ things is available. There are even a few new methods and additions to old
+ ones! If you are interested in what has gone on under the hood see the
+ "Compatibility with CGI.pm" section in CGI::Simple(3pm).
+ .
+ In practical testing this module loads and runs about twice as fast as CGI.pm
+ depending on the precise task.
