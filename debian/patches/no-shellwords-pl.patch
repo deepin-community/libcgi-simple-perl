@@ -1,0 +1,24 @@
+From: Dominic Hargreaves <dom@earth.li>
+Subject: Use Text::ParseWords instead of shellwords.pl
+
+The shellwords.pl library is deprecated and will be removed in a future
+version of perl. Text::ParseWords has been in core since 5.0.0 and it is
+used by shellwords.pl already.
+
+Adapted from <https://github.com/markstos/CGI.pm/commit/0cf175dbfbeaa46d71343412c715096da5bd0eaf>
+
+--- a/lib/CGI/Simple.pm
++++ b/lib/CGI/Simple.pm
+@@ -1189,10 +1189,10 @@
+     @words = @ARGV;
+   }
+   elsif ( $_[0]->{'.globals'}->{'DEBUG'} == 2 ) {
+-    require "shellwords.pl";
++    require Text::ParseWords;
+     print "(offline mode: enter name=value pairs on standard input)\n";
+     chomp( my @lines = <STDIN> );
+-    @words = &shellwords( join " ", @lines );
++    @words = &Text::ParseWords::old_shellwords( join " ", @lines );
+   }
+   else {
+     return '';
