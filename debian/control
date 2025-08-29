@@ -13,7 +13,7 @@ Build-Depends-Indep: libtest-exception-perl <!nocheck>,
                      libtest-simple-perl <!nocheck>,
                      libwww-perl <!nocheck>,
                      perl
-Standards-Version: 4.6.0
+Standards-Version: 4.6.2
 Vcs-Browser: https://salsa.debian.org/perl-team/modules/packages/libcgi-simple-perl
 Vcs-Git: https://salsa.debian.org/perl-team/modules/packages/libcgi-simple-perl.git
 Homepage: https://metacpan.org/release/CGI-Simple
@@ -21,9 +21,9 @@ Rules-Requires-Root: no
 
 Package: libcgi-simple-perl
 Architecture: all
+Multi-Arch: foreign
 Depends: ${misc:Depends},
          ${perl:Depends}
-Multi-Arch: foreign
 Description: simple CGI.pm compatible OO CGI interface
  CGI::Simple provides a relatively lightweight drop in replacement for CGI.pm.
  It shares an identical OO interface to CGI.pm for parameter parsing, file
