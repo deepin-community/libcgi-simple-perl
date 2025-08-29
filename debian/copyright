@@ -30,7 +30,7 @@ License: Artistic
 Files: debian/*
 Copyright: 2005, Christopher Sacca <csacca@thecsl.org>
  2007, Jose Luis Rivas <ghostbar@debian.org>
- 2008-2022, gregor herrmann <gregoa@debian.org>
+ 2008-2024, gregor herrmann <gregoa@debian.org>
  2009, Ansgar Burchardt <ansgar@debian.org>
  2009, Ryan Niebur <ryan@debian.org>
  2010, Damyan Ivanov <dmn@debian.org>

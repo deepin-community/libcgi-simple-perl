@@ -1,3 +1,15 @@
+libcgi-simple-perl (1.281-1) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Update standards version to 4.6.1, no changes needed.
+
+  [ gregor herrmann ]
+  * Import upstream version 1.281.
+  * Update years of upstream copyright.
+  * Declare compliance with Debian Policy 4.6.2.
+
+ -- gregor herrmann <gregoa@debian.org>  Sun, 04 Feb 2024 03:13:47 +0100
+
 libcgi-simple-perl (1.280-2) unstable; urgency=medium
 
   [ Debian Janitor ]
