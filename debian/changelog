@@ -1,3 +1,9 @@
+libcgi-simple-perl (1.281-1deepin1) unstable; urgency=medium
+
+  * Fix CVE-2025-40927: HTTP Response Splitting vulnerability
+
+ -- deepin-ci-robot <packages@deepin.org>  Mon, 27 Apr 2026 18:45:37 +0800
+
 libcgi-simple-perl (1.281-1) unstable; urgency=medium
 
   [ Debian Janitor ]
