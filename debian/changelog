@@ -1,3 +1,19 @@
+libcgi-simple-perl (1.282-1~deb13u1) trixie; urgency=medium
+
+  * Rebuild for trixie
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Fri, 29 Aug 2025 05:42:29 +0200
+
+libcgi-simple-perl (1.282-1) unstable; urgency=medium
+
+  * Team upload.
+  * Import upstream version 1.282.
+    - Sanitize all user-supplied values before inserting into HTTP headers
+      (CVE-2025-40927)
+  * Drop "Port latest header-injection refinement from CGI.pm"
+
+ -- Salvatore Bonaccorso <carnil@debian.org>  Fri, 29 Aug 2025 05:26:27 +0200
+
 libcgi-simple-perl (1.281-1) unstable; urgency=medium
 
   [ Debian Janitor ]
